@@ -1,0 +1,24 @@
+ <%- include("partial/header")%>
+
+<%- include("partial/nav")%>
+
+<h1 class="text-center font-bold uppercase text-3xl">this is login  page</h1>
+<form action="/login-user"  class="mt-[2%]  text-center bg-gradient-to-r from-violet-500 to-fuchsia-500" method="post">
+
+    <input class="w-[40%] mt-6 mb-10 border border-zinc-500 p-3 rounded-md text-xl " type="text" placeholder="username" name="username">
+    <br>
+<br>
+    <input class="w-[40%] mb-10 border border-zinc-500 p-3 rounded-md text-xl type="password" placeholder="******" name="passsword">
+<br>
+<br>
+<a href="/forget-password">forget passsword</a>
+
+<p>dont have an account?</p>
+<a href="/register">register</a>
+</form> 
+<br>
+
+
+
+
+<%- include("partial/footer")%>  

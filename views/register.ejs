@@ -1,0 +1,26 @@
+<%- include("partial/header")%>
+
+<%- include("partial/nav")%>
+<form action="/register-user"  class="mt-[2%] text-center  bg-gradient-to-r from-violet-500 to-fuchsia-500" method="post">
+    
+    <h1 class="font-bold text-3xl">this is resgister  page</h1>
+
+    <input class="w-[40%] mt-2 mb-10 border border-zinc-500 p-3 rounded-md text-xl" type="text" placeholder="username" name="name">
+    <br>
+<br>
+    <input class="w-[40%] mt-2 mb-10 border border-zinc-500 p-3 rounded-md text-xl" type="password" placeholder="******" name="passsword">
+<br>
+<br>
+<input class="w-[40%] mt-2 mb-10 border border-zinc-500 p-3 rounded-md text-xl" type="text" placeholder="email id" name="email">
+<br>
+<br> 
+<button
+          class="mt-2 text-center block w-[40%] m-auto hover:bg-purple-900 rounded text-white py-3  text-center bg-blue-900">Register
+          User</button>
+
+          <p class="mt-3 w-[40%] text-left m-auto text-center">Already have an account? <a class="text-blue-900" href="/login">login</a>
+          </p>
+</form>
+
+
+<%- include("partial/footer")%> 
