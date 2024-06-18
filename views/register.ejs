@@ -1,26 +1,44 @@
-<%- include("partial/header")%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="h-screen bg-cover" style="background-image: url('https://images.unsplash.com/photo-1716654268651-85fd9328b27f?q=80&w=1650&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    <%- include('partial/header')%>
+    <!--  -->
+    <%- include('partial/nav')%>
+    <div class="flex items-center justify-center h-[90%]">
+        <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg w-full max-w-md">
+            <form action="/register-user" method="post" class="text-center">
+                <h1 class="text-3xl font-bold text-gray-800 mb-6">Register Page</h1>
+                <div class="mb-4 text-left">
+                    <label for="username" class="block text-gray-700 font-bold mb-2">Username</label>
+                    <input id="username" name="username" type="text" placeholder="Username" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <div class="mb-4 text-left">
+                    <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <div class="mb-4 text-left">
+                    <label for="password" class="block text-gray-700 font-bold mb-2">Password</label>
+                    <input id="password" name="password" type="password" placeholder="Password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <div class="mb-4 text-left">
+                    <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                    <input id="email" name="email" type="text" placeholder="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <button type="submit" class="w-full py-2 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-lg">Register User</button>
+                <div class="mt-4">
+                    <span class="text-gray-700">Already have an account? </span>
+                    <a href="/login" class="text-blue-500 hover:text-blue-700">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
 
-<%- include("partial/nav")%>
-<form action="/register-user"  class="mt-[2%] text-center  bg-gradient-to-r from-violet-500 to-fuchsia-500" method="post">
-    
-    <h1 class="font-bold text-3xl">this is resgister  page</h1>
-
-    <input class="w-[40%] mt-2 mb-10 border border-zinc-500 p-3 rounded-md text-xl" type="text" placeholder="username" name="name">
-    <br>
-<br>
-    <input class="w-[40%] mt-2 mb-10 border border-zinc-500 p-3 rounded-md text-xl" type="password" placeholder="******" name="passsword">
-<br>
-<br>
-<input class="w-[40%] mt-2 mb-10 border border-zinc-500 p-3 rounded-md text-xl" type="text" placeholder="email id" name="email">
-<br>
-<br> 
-<button
-          class="mt-2 text-center block w-[40%] m-auto hover:bg-purple-900 rounded text-white py-3  text-center bg-blue-900">Register
-          User</button>
-
-          <p class="mt-3 w-[40%] text-left m-auto text-center">Already have an account? <a class="text-blue-900" href="/login">login</a>
-          </p>
-</form>
-
-
-<%- include("partial/footer")%> 
+    <% include('partial/footer') %>
+</body>
+</html>

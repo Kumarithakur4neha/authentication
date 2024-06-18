@@ -1,0 +1,23 @@
+<%- include("partial/header")%>
+<div class="bg-cover bg-center h-screen" style="background-image: url('https://images.unsplash.com/photo-1716654195483-de7a5ad4d23c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+
+<%- include('partial/nav')%>
+<form action="/post-create"  class="mt-[2%] text-center  " method="post" enctype="multipart/form-data">
+    
+    <h1 class=" text-white font-bold text-3xl">create your post here</h1>
+
+    <input class="w-[40%] mt-2 mb-10 border border-zinc-500 p-3 rounded-md text-xl" type="file" name="media">
+<br>
+
+    <input class="w-[40%] mt-2 mb-10 border border-zinc-500 p-3 rounded-md text-xl" type="text" placeholder="tile of the post" name="title">
+    <br>
+<br>
+    
+<button
+          class="mt-2 text-center block w-[40%] m-auto hover:bg-purple-900 rounded text-white py-3  text-center bg-blue-900">create post</button>
+
+       
+</form>
+</div>
+
+<%- include("partial/footer")%> 

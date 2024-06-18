@@ -1,5 +1,17 @@
-<nav class="w-screen text-red-400  flex gap-x-10 justify-center py-5">
-    <a class="hover:px-5 hover:text-white hover:bg-purple-600"  href="/">home</a>
-    <a class="hover:px-5 hover:text-white hover:bg-purple-600" href="/login">login</a>
-    <a class="hover:px-5 hover:text-white hover:bg-purple-600" href="/about">about</a>
+<nav class="w-screen text-white-400  flex gap-x-10 justify-center py-5">
+
+   <% if(user){ %>
+
+        <a class="  text-white hover:px-5 hover:text-pink hover:bg-purple-400 "  href="/profile">home</a>
+        
+        <a class=" text-white hover:px-5 hover:text-white hover:bg-purple-400" href="/timeline">Timeline</a>
+   
+<% }else{ %>
+
+    <a class=" text-white  hover:px-5 hover:text-white hover:bg-pink-400"  href="/">home</a>
+    <a class="  text-white hover:px-5 hover:text-white hover:bg-pink-400" href="/login">login</a>
+<% } %>
+
+
+    <a class=" text-white hover:px-5 hover:text-white hover:bg-pink-400" href="/about">about</a>
 </nav>
