@@ -41,7 +41,7 @@ try {
   res.redirect('/login');
  } catch (error) {
   console.log(error);
-  res.json(error)
+  res.send(error.message)
  }
 
 });
