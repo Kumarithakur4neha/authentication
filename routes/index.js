@@ -40,7 +40,8 @@ try {
   await user.register({name  ,username, email} , password);
   res.redirect('/login');
  } catch (error) {
-  res.send(error)
+  console.log(error);
+  res.json(error)
  }
 
 });
