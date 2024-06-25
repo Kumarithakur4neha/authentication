@@ -14,7 +14,7 @@ const sendmail = require("../utils/mail");
 
  const passport=require("passport")   
  const LocalStrategy=require("passport-local")
- passport.use(new LocalStrategy(user.authenticate()));
+ passport.use(user.createStrategy());
 
 
 /* GET home page. */
